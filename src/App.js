@@ -6,8 +6,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <UserList />
-      <UserProfile name="Vinod" email="s.vinod52@gmail.com" />
+      <UserList dataSource="https://jsonplaceholder.typicode.com/users" />
+      <UserProfile
+        name="Vinod"
+        email="s.vinod52@gmail.com"
+        dataSource="https://jsonplaceholder.typicode.com/posts"
+      />
     </div>
   );
 }

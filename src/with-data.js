@@ -1,6 +1,6 @@
 import React from "react";
 
-const withData = (Wrappedcomponent, dataSource) => {
+const withData = (Wrappedcomponent) => {
   class withData extends React.Component {
     constructor(props) {
       super(props);
@@ -10,7 +10,7 @@ const withData = (Wrappedcomponent, dataSource) => {
     }
 
     componentDidMount() {
-      fetch(dataSource)
+      fetch(this.props.dataSource)
         .then((response) => response.json())
         .then((data) => this.setState({ data: data.slice(0, 3) }));
     }
